@@ -7,7 +7,7 @@ const searchRobots = async (term) => {
     // construya una constante respuesta (response) con axios de tipo get que reciba en objeto params en llave query el term
     const response = await axios.get(url, {
         params: {
-            q: term
+            query: term
         }
     });
 
