@@ -1,5 +1,5 @@
-// Recibe como prop name e email
-import RobotsList from "./RobotsList"
+// Recibe como props 'name' y 'email'
+import RobotsList from "./RobotsList"; // Importa el componente RobotsList (aunque no se usa aquí, posiblemente para mantener consistencia en las importaciones)
 
 function Card({ name, email }) {
     return (
@@ -8,9 +8,9 @@ function Card({ name, email }) {
                 <div className="card-image">
                     <figure className="image is-4by3">
                         <img
-                            // src necesita el prop name
+                            // 'src' necesita el prop 'name' para generar la imagen única del robot
                             src={`https://robohash.org/${name}`}
-                            // alt necesita el prop email
+                            // 'alt' necesita el prop 'email' para la descripción de la imagen
                             alt={`${email}`}
                         />
                     </figure>
@@ -18,9 +18,9 @@ function Card({ name, email }) {
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
-                            {/* despliegue el nombre del robot */}
+                            {/* Despliega el nombre del robot */}
                             <p className="title is-4">{name}</p>
-                            {/* despliegue el email del robot */}
+                            {/* Despliega el email del robot */}
                             <p className="subtitle is-6">{email}</p>
                         </div>
                     </div>
@@ -30,4 +30,4 @@ function Card({ name, email }) {
     );
 }
 
-export default Card;
+export default Card; // Exporta el componente Card como el componente por defecto
